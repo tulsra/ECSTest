@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EOL-9d-ODB">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--NY Times Most Popular-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ECSTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3ki-6N-TZO">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" red="0.96737152339999999" green="0.96556919809999997" blue="0.94792979960000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.95620208979999999" green="0.95748144390000001" blue="0.94426387550000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="rxO-kh-Gk4"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="JBA-wx-6H3"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3ki-6N-TZO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HMc-Lx-uXG"/>
+                            <constraint firstAttribute="bottom" secondItem="3ki-6N-TZO" secondAttribute="bottom" id="Mf7-DK-ihC"/>
+                            <constraint firstItem="3ki-6N-TZO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hba-h7-Ktk"/>
+                            <constraint firstItem="3ki-6N-TZO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="l5J-Mi-Acj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="NY Times Most Popular" id="gtN-KX-NqI">
+                        <barButtonItem key="leftBarButtonItem" image="menu-white" id="RxE-0O-rBX">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="dot_menu" id="kBY-D0-A2B">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                            <barButtonItem image="search" id="x99-MQ-x5O">
+                                <inset key="imageInsets" minX="40" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="3ki-6N-TZO" id="3I2-tg-VS1"/>
+                        <segue destination="Lbq-xX-T91" kind="show" identifier="Detail" id="gWH-Ht-EvX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="286" y="-287"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="Zsz-sl-clH">
+            <objects>
+                <viewController id="Lbq-xX-T91" customClass="DetailViewController" customModule="ECSTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sIj-ql-Nie">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ihe-QJ-Q95">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Lbq-xX-T91" id="ZwQ-hu-ZPe"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ihe-QJ-Q95" firstAttribute="top" secondItem="wOj-6P-Z4f" secondAttribute="top" id="2yH-t3-i8h"/>
+                            <constraint firstItem="wOj-6P-Z4f" firstAttribute="bottom" secondItem="ihe-QJ-Q95" secondAttribute="bottom" id="65X-M0-b2T"/>
+                            <constraint firstItem="ihe-QJ-Q95" firstAttribute="leading" secondItem="wOj-6P-Z4f" secondAttribute="leading" id="qd1-fx-GwS"/>
+                            <constraint firstItem="wOj-6P-Z4f" firstAttribute="trailing" secondItem="ihe-QJ-Q95" secondAttribute="trailing" id="v7R-ZE-0wg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wOj-6P-Z4f"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="ihe-QJ-Q95" id="sOH-QP-87M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i6a-6d-adk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1001" y="-299"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="v0s-hv-wqx">
+            <objects>
+                <navigationController id="EOL-9d-ODB" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YjO-da-fT4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.29620587825775146" green="0.89359897375106812" blue="0.76148372888565063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="qDX-XD-oxX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YkO-2o-MBU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-436" y="-271"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dot_menu" width="24" height="24"/>
+        <image name="menu-white" width="20" height="20"/>
+        <image name="search" width="32" height="32"/>
+    </resources>
+</document>
