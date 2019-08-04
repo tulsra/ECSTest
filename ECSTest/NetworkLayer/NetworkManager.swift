@@ -58,9 +58,6 @@ struct NetworkManager {
 
                         let apiResponse = ViewsAPIResponse(JSONString: jsonString)
                         completion(apiResponse,nil)
-                        
-                    default:
-                        print("")
     
                     }
                     

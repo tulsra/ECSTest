@@ -7,17 +7,19 @@
 //
 
 import UIKit
+import WebKit
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var webView: WKWebView!
     var url: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.showLoader()
-        webView.loadRequest(URLRequest(url: URL(string: url)!))
+        webView.navigationDelegate = self
+        webView.load(URLRequest(url: URL(string: url)!))
     }
     
 
@@ -33,9 +35,13 @@ class DetailViewController: UIViewController {
 
 }
 
-extension DetailViewController: UIWebViewDelegate {
+extension DetailViewController: WKNavigationDelegate {
     
-    func webViewDidFinishLoad(_ webView: UIWebView) {
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        self.dismissLoader()
+    }
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         self.dismissLoader()
     }
 }

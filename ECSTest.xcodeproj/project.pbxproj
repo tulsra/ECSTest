@@ -48,6 +48,7 @@
 		8C9AC2C322F5F65A00D3E1FB /* MainViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9AC2C222F5F65A00D3E1FB /* MainViewViewModel.swift */; };
 		8C9AC2C622F6030B00D3E1FB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9AC2C522F6030B00D3E1FB /* DetailViewController.swift */; };
 		8C9AC2C822F62E0000D3E1FB /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9AC2C722F62E0000D3E1FB /* ViewControllerExtension.swift */; };
+		8C9AC2CB22F6AF1D00D3E1FB /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9AC2CA22F6AF1D00D3E1FB /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		8C9AC2C222F5F65A00D3E1FB /* MainViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewViewModel.swift; sourceTree = "<group>"; };
 		8C9AC2C522F6030B00D3E1FB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8C9AC2C722F62E0000D3E1FB /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
+		8C9AC2CA22F6AF1D00D3E1FB /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C9AC2CB22F6AF1D00D3E1FB /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +135,7 @@
 				8C9AC25322F5643D00D3E1FB /* ECSTest */,
 				8C9AC26822F5643E00D3E1FB /* ECSTestTests */,
 				8C9AC25222F5643D00D3E1FB /* Products */,
+				8C9AC2C922F6AF1D00D3E1FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -264,6 +268,14 @@
 				8C9AC2C522F6030B00D3E1FB /* DetailViewController.swift */,
 			);
 			path = DetailedView;
+			sourceTree = "<group>";
+		};
+		8C9AC2C922F6AF1D00D3E1FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C9AC2CA22F6AF1D00D3E1FB /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

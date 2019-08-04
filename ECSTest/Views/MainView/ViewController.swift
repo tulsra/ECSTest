@@ -23,7 +23,6 @@ class ViewController: UIViewController {
     }
     
     func setupUI() {
-        self.title = "NY Times Most Popular"
         self.tableView.estimatedRowHeight = 60
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.register(UINib.init(nibName: cellReuseIdendifier, bundle: nil), forCellReuseIdentifier: cellReuseIdendifier)
